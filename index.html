@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Botão de mensagem de cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cookie-message">
+    <p>Este site usa cookies para melhorar sua experiência de navegação.</p>
+    <button id="accept-cookies">Aceitar</button>
+  </div>
+  <script>
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+      // Salve os dados dos cookies no armazenamento local.
+      localStorage.setItem("cookies-accepted", true);
+      // Oculte a mensagem de cookies.
+      document.getElementById("cookie-message").style.display = "none";
+    });
+  </script>
+</body>
+</html>
